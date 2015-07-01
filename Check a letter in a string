@@ -1,0 +1,55 @@
+#Try to find a letter in a string in the different way
+string = 'applfe'
+for index in string:
+    if index == 'f':
+        print 'Input string has letter f!'
+    else:
+        print 'Have not found letter f!'
+ # Search a letter in a string, try with index
+ 
+ string = 'abcdef'
+target = 'f'
+found = 0
+def search():
+ 
+    for index in string,index == target:
+        found = 1
+    else:
+        found = 0
+
+def found():
+    if found == 1: 
+        print "%s is in %s" %(target,string)
+    else:
+        print "%s does not have %s" %(string,target)
+        
+
+# Not so clear why it is not work, still woring on it
+
+string = 'abcdef'
+target = 'f'
+
+if target in string:
+    print "yes, we found it."
+else: 
+    print "Target clear."
+# Done it with simple way.
+
+import re
+
+s1 = 'Testing string'
+s2 = '1234,12345$'
+
+regex = re.compile('[0-9,$]+$')
+
+if ( regex.match(s1) ):
+   print "s1 matched"
+else:
+   print "s1 didn't match"
+
+if ( regex.match(s2) ):
+   print "s2 matched"
+else:
+   print "s2 didn't match"
+# Try it with module
+
