@@ -1,0 +1,23 @@
+# try to use pandas module, still working on it
+from datetime import datetime
+import pandas as pd
+
+from pandas.tseries.offsets import Hour, Minute
+from pandas import Series, DateFrame
+
+import numpy as np
+
+delta = datetime(2008,1,1)-datetime(2014,12,31)
+print delta
+
+import pytz
+tz = pytz.timezone('US/Eastern')
+rng = pd.date_range('1/1/2008','31/12/2014',freq='D',tz='US/Eastern')
+ts = Series(np.random.randn(len(rng)), index=rng)
+ts
+
+ts3pm =  ts.asfreq('BM')
+ts3pm
+
+%matplotlib inline
+ts.plot()
